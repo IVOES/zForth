@@ -1,0 +1,44 @@
+src/atmega8/main.c:65:7: style: Local variable 'buf' shadows outer variable [shadowVariable]
+ char buf[16];
+      ^
+src/atmega8/main.c:24:13: note: Shadowed declaration
+static char buf[32];
+            ^
+src/atmega8/main.c:65:7: note: Shadow variable
+ char buf[16];
+      ^
+src/linux/main.c:61:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[256];
+      ^
+src/linux/main.c:64:6: style: The scope of the variable 'line' can be reduced. [variableScope]
+ int line = 1;
+     ^
+src/zforth/zforth.c:266:10: style: The scope of the variable 't' can be reduced. [variableScope]
+ uint8_t t[2];
+         ^
+src/zforth/zforth.c:525:29: style:inconclusive: Function 'do_prim' argument 1 names different: declaration 'prim' definition 'op'. [funcArgNamesDifferent]
+static void do_prim(zf_prim op, const char *input)
+                            ^
+src/zforth/zforth.c:100:29: note: Function 'do_prim' argument 1 names different: declaration 'prim' definition 'op'.
+static void do_prim(zf_prim prim, const char *input);
+                            ^
+src/zforth/zforth.c:525:29: note: Function 'do_prim' argument 1 names different: declaration 'prim' definition 'op'.
+static void do_prim(zf_prim op, const char *input)
+                            ^
+src/zforth/zforth.c:850:18: style:inconclusive: Function 'zf_init' argument 1 names different: declaration 'trace' definition 'enable_trace'. [funcArgNamesDifferent]
+void zf_init(int enable_trace)
+                 ^
+src/zforth/zforth.h:60:18: note: Function 'zf_init' argument 1 names different: declaration 'trace' definition 'enable_trace'.
+void zf_init(int trace);
+                 ^
+src/zforth/zforth.c:850:18: note: Function 'zf_init' argument 1 names different: declaration 'trace' definition 'enable_trace'.
+void zf_init(int enable_trace)
+                 ^
+src/zforth/zforth.c:956:0: style: The function 'zf_uservar_get' is never used. [unusedFunction]
+
+^
+src/zforth/zforth.c:944:0: style: The function 'zf_uservar_set' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
